@@ -5,3 +5,4 @@ c语言工具箱,包括:
 - [x] debug 宏
 - [x] queue
 - [x] cmake模板
+- [x] 堆内存管理

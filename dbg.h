@@ -7,6 +7,8 @@
 
 #ifndef _DBG_H
 
+#include <stdio.h>
+
 extern int g_log_level;
 
 #ifndef __FILE_NAME__

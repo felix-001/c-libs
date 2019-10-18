@@ -1,9 +1,5 @@
-/**
-* @file dbg.h
-* @author rigensen
-* @brief 
-* @date 四 10/17 15:51:28 2019
-*/
+#ifndef _DBG_H
+#define _DBG_H
 
 #define NONE                 "\e[0m"
 #define BLACK                "\e[0;30m"
@@ -55,4 +51,4 @@ extern int g_log_level;
    } \
 } while(0)
 
-
+#endif

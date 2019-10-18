@@ -44,6 +44,8 @@ extern int g_log_level;
 #define LOGD(module, args...) LOG_COMMON( module, "DEBUG", LOG_LEVEL_DEBUG, args)
 #define LOGT(module, args...) LOG_COMMON( module, "TRACE", LOG_LEVEL_TRACE, args)
 #define LOGW(module, args...) LOG_COMMON( module, "WARN", LOG_LEVEL_WARN, args)
+#define PRINT_INT(module, val) LOGI(module, #val":%d", val )
+#define PRINT_STR(module, s) LOGI(module, #s":%s", s )
 
 #define LOGE(module, args...) do { \
    if (  LOG_LEVEL_ERROR >= g_log_level ) { \

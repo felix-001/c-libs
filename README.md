@@ -4,3 +4,4 @@ c语言工具箱,包括:
 - [x] crc32
 - [x] debug 宏
 - [x] queue
+- [x] cmake模板

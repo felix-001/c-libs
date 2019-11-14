@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+// 5 to 35
 void gen_rand()
 {
   int num;

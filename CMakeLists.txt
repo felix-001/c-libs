@@ -5,9 +5,13 @@ if( DEBUG )
     add_definitions( "-Wall -g" )
 endif()
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/src )
-link_directories( ${CMAKE_CURRENT_SOURCE_DIR}/lib )
+
 aux_source_directory( ${CMAKE_CURRENT_SOURCE_DIR}/src DIR_SRCS)
 add_executable( ${APPNAME} ${DIR_SRCS} )
-list(APPEND DIR_SRCS tests.c)
 target_link_libraries( ${APPNAME} pthread )
-add_subdirectory( third_party )
+
+foreach(f IN LISTS DIR_SRCS )
+  get_filename_component(b ${f} NAME)
+  set_source_files_properties(${f} PROPERTIES
+    COMPILE_DEFINITIONS "__FILENAME__=\"${b}\"")
+endforeach()

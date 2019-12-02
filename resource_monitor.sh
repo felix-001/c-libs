@@ -7,7 +7,10 @@ do
     echo $time >> monitor.log
     echo =================== >> monitor.log
     cat /proc/$pid/status | grep VmRSS >> monitor.log
-    ls /proc/$pid/fd >> monitor.log
+    free >> monitor.log
+    fd_count=$(ls /proc/$pid/fd | wc -l)
+    echo "fd: "$fd_count >> monitor.log
+    echo "  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND" >> monitor.log
     top -n 1 | grep $1 | grep -v grep >> monitor.log
-    sleep 5
+    sleep 3
 done

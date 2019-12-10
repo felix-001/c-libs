@@ -13,6 +13,7 @@ if( DEBUG )
     add_definitions( "-Wall -g" )
 endif()
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/src )
+#link_directories( ${CMAKE_CURRENT_SOURCE_DIR}/libs )
 
 aux_source_directory( ${CMAKE_CURRENT_SOURCE_DIR}/src DIR_SRCS)
 add_executable( ${APPNAME} ${DIR_SRCS} )

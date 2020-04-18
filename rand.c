@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <time.h>
 // 5 to 35
 void gen_rand()
 {

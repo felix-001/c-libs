@@ -12,3 +12,5 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <assert.h>
+
+#include "log.h"
